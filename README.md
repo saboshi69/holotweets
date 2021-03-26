@@ -1,3 +1,3 @@
 ## Getting Started
 
-Check out the page!](https://holotweets.co/) 
+Check out the [page!](https://holotweets.co/) 
