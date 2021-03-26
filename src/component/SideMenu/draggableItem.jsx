@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Box } from "@chakra-ui/react"
-import { MdDragHandle } from "react-icons/Md";
+import { MdDragHandle } from "react-icons/md";
 import { useDrag, useDrop } from 'react-dnd';
 import { ItemTypes } from './draggleType';
 

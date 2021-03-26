@@ -1,9 +1,9 @@
 import React, { memo } from 'react';
-import { Container, Flex, Button, Stack, Text } from "@chakra-ui/react"
+import { Container, Flex, Button, Stack, Text, Link } from "@chakra-ui/react"
 import { GoSettings } from "react-icons/go";
-import { RiUserFollowLine } from "react-icons/Ri";
+import { RiUserFollowLine } from "react-icons/ri";
 import { IoMdInformationCircleOutline } from "react-icons/io";
-import { FiGithub, FiTwitter } from "react-icons/Fi";
+import { FiGithub, FiTwitter } from "react-icons/fi";
 import SideMenu from 'component/SideMenu';
 import Popup from 'component/Popup';
 import AboutPopupContent from 'component/Popup/aboutPopupContent';
@@ -41,9 +41,11 @@ function Header() {
             <Button ref={aboutBtnRef} onClick={aboutOnOpen} leftIcon={<IoMdInformationCircleOutline />} colorScheme="teal" variant="link">
               About
             </Button>
-            <Button leftIcon={<FiGithub />} colorScheme="teal" variant="link">
-              Github
-            </Button>
+            <Link href="https://github.com/saboshi69/holotweets" isExternal>
+              <Button leftIcon={<FiGithub />} colorScheme="teal" variant="link">
+                Github
+              </Button>
+            </Link>
           </Stack>
         </Flex>
       </Container>
