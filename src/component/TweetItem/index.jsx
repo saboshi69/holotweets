@@ -9,7 +9,7 @@ function TweetItem({ config, tweetId }) {
 
   return (
     <Box p={{ base: "15px", md: "20px", lg: "25px" }} flexShrink="0" width={`${col}%`} overflow={"hidden"} height={`calc((100vh - 110px) / ${row})`}>
-      <Box boxShadow="0px 0px 8px 1px rgba(0,0,0,0.37)" overflow={"scroll"} borderRadius="5px" height="100%" css={{
+      <Box boxShadow="0px 0px 8px 1px rgba(0,0,0,0.37)" overflowY={"scroll"} borderRadius="5px" height="100%" css={{
         '&::-webkit-scrollbar': {
           width: '10px',
         },
