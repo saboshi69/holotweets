@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { Container, Flex, Button, Stack, Text, Link } from "@chakra-ui/react"
+import { Container, Flex, Button, Wrap, WrapItem, Text, Link } from "@chakra-ui/react"
 import { GoSettings } from "react-icons/go";
 import { RiUserFollowLine } from "react-icons/ri";
 import { IoMdInformationCircleOutline } from "react-icons/io";
@@ -26,27 +26,37 @@ function Header() {
   return (
     <>
       <Container px={{ base: "15px", md: "20px", lg: "25px" }} maxW="container.xl">
-        <Flex justifyContent="space-between" alignItems="baseline" borderBottom="2px" borderColor="gray.400" pt="30px" pb="15px" >
+        <Flex flexDirection={{ base: "column", md: "row" }} justifyContent="space-between" alignItems="baseline" borderBottom="2px" borderColor="gray.400" pt="30px" pb="15px" >
           <Text fontSize="3xl">HoloTweets</Text>
-          <Stack direction="row" spacing={4} align="center">
-            <Button ref={settingBtnRef} onClick={settingOnOpen} leftIcon={<GoSettings />} colorScheme="teal" variant="link">
-              Setting
-            </Button>
-            <Button ref={followingBtnRef} onClick={followingOnOpen} leftIcon={<RiUserFollowLine />} colorScheme="teal" variant="link">
-              Following
-            </Button>
-            <Button ref={listBtnRef} onClick={listOnOpen} leftIcon={<FiTwitter />} colorScheme="teal" variant="link">
-              Twitter List
-            </Button>
-            <Button ref={aboutBtnRef} onClick={aboutOnOpen} leftIcon={<IoMdInformationCircleOutline />} colorScheme="teal" variant="link">
-              About
-            </Button>
-            <Link href="https://github.com/saboshi69/holotweets" isExternal>
-              <Button leftIcon={<FiGithub />} colorScheme="teal" variant="link">
-                Github
+          <Wrap direction="row" spacing={4} align="center">
+            <WrapItem>
+              <Button ref={settingBtnRef} onClick={settingOnOpen} leftIcon={<GoSettings />} colorScheme="teal" variant="link">
+                Setting
               </Button>
-            </Link>
-          </Stack>
+            </WrapItem>
+            <WrapItem>
+              <Button ref={followingBtnRef} onClick={followingOnOpen} leftIcon={<RiUserFollowLine />} colorScheme="teal" variant="link">
+                Following
+              </Button>
+            </WrapItem>
+            <WrapItem>
+              <Button ref={listBtnRef} onClick={listOnOpen} leftIcon={<FiTwitter />} colorScheme="teal" variant="link">
+                Twitter List
+              </Button>
+            </WrapItem>
+            <WrapItem>
+              <Button ref={aboutBtnRef} onClick={aboutOnOpen} leftIcon={<IoMdInformationCircleOutline />} colorScheme="teal" variant="link">
+                About
+              </Button>
+            </WrapItem>
+            <WrapItem>
+              <Link href="https://github.com/saboshi69/holotweets" isExternal>
+                <Button leftIcon={<FiGithub />} colorScheme="teal" variant="link">
+                  Github
+                </Button>
+              </Link>
+            </WrapItem>
+          </Wrap>
         </Flex>
       </Container>
       <SideMenu
