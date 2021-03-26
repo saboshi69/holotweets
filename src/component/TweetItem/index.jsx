@@ -25,6 +25,7 @@ function TweetItem({ config, tweetId }) {
         '&::-webkit-scrollbar-thumb:hover': {
           background: '#555',
         },
+        '-webkit-overflow-scrolling': 'touch'
       }}>
         <Timeline key={tweetId} dataSource={{ sourceType: "profile", screenName: tweetId }} />
       </Box>
