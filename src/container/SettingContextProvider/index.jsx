@@ -19,8 +19,8 @@ function SettingContextProvider({ children }) {
 
   const [isInit, setIsInit] = useState(true);
   const [config, setConfig] = useState(isLargeDevice ? {
-    col: 4,
-    row: 1,
+    col: 3,
+    row: 2,
     isWrap: true,
   } : {
     col: 1,
