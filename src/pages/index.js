@@ -14,7 +14,27 @@ export default function Home() {
         />
         <meta
           name="description"
-          content="With holoTweet, you'll never miss a member's tweet now!"
+          content="With HoloTweet, you'll never miss a member's tweet now! HoloTweet includes a complete list of hololive member's twitter. You can customize your own tweets layout and order  with a few clicks."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://holotweets.co/" />
+        <meta
+          property="og:title"
+          content="HoloTweets — View all hololive's tweets at once"
+        />
+        <meta
+          property="og:description"
+          content="With HoloTweet, you'll never miss a member's tweet now! HoloTweet includes a complete list of hololive member's twitter. You can customize your own tweets layout and order  with a few clicks."
+        />
+        <meta property="og:image" content="/image/og-image.jpg" />
+        <meta property="twitter:url" content="https://holotweets.co/" />
+        <meta
+          property="twitter:title"
+          content="HoloTweets — View all hololive's tweets at once"
+        />
+        <meta
+          property="twitter:description"
+          content="With HoloTweet, you'll never miss a member's tweet now! HoloTweet includes a complete list of hololive member's twitter. You can customize your own tweets layout and order  with a few clicks."
         />
         <link
           rel="apple-touch-icon"
