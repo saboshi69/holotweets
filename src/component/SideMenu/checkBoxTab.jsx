@@ -46,14 +46,14 @@ function CheckBoxTab({ follow, setFollow }) {
     <>
       {!isUpdating ?
         <>
+          <HStack mb="15px" justify="flex-end">
+            <Button colorScheme="teal" size="md" onClick={onSave}>Save</Button>
+          </HStack>
           <CheckboxGroup colorScheme="teal" value={newOrder} onChange={onCheckGroupChange}>
             <Accordion>
               {checkBoxRender}
             </Accordion>
           </CheckboxGroup>
-          <HStack mt="25px" justify="flex-end">
-            <Button colorScheme="teal" size="md" onClick={onSave}>Save</Button>
-          </HStack>
         </> : <></>}
     </>
 

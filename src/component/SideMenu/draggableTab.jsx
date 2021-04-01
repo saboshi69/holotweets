@@ -54,12 +54,12 @@ function DraggableTab({ follow, setFollow }) {
     <>
       {!isUpdating ?
         <>
+          <HStack justify="flex-end">
+            <Button colorScheme="teal" size="md" onClick={onSave}>Save</Button>
+          </HStack>
           <DndProvider backend={HTML5Backend}>
             {itemRender}
           </DndProvider>
-          <HStack mt="25px" justify="flex-end">
-            <Button colorScheme="teal" size="md" onClick={onSave}>Save</Button>
-          </HStack>
         </> : <></>}
     </>
   );

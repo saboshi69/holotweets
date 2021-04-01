@@ -1,12 +1,16 @@
-import React, { memo } from 'react';
+import React, { memo, useMemo } from 'react';
 import { Slider, SliderTrack, SliderFilledTrack, SliderThumb, Switch, Text, Stack, Box } from "@chakra-ui/react"
 import { useSetting } from 'container/SettingContextProvider'
+import { useColorMode } from "@chakra-ui/react"
 
 
 
 function SideSetting() {
-
+  const { colorMode, toggleColorMode } = useColorMode()
   const { config, setConfig } = useSetting();
+  const isDarkMode = useMemo(() => {
+    return colorMode === "light" ? false : true
+  }, [colorMode])
 
   const onColChange = (number) => {
     setConfig(prev => {
@@ -58,6 +62,10 @@ function SideSetting() {
       <Stack align="flex-end" direction="row" mt="16px">
         <Text fontSize="md">Row Wrap:</Text>
         <Switch size="md" colorScheme="teal" onChange={onWrap} isChecked={config.isWrap} />
+      </Stack>
+      <Stack align="flex-end" direction="row" mt="16px">
+        <Text fontSize="md">Dark Mode:</Text>
+        <Switch size="md" colorScheme="teal" onChange={toggleColorMode} isChecked={isDarkMode} />
       </Stack>
     </Box>
   );

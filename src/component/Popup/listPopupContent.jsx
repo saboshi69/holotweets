@@ -8,14 +8,15 @@ import {
   WrapItem
 } from '@chakra-ui/react';
 import twitterData from 'json/twitterData.json'
-
+import { useColorModeValue } from "@chakra-ui/react"
 
 function ListPopupContent() {
+  const color = useColorModeValue("teal.600", "teal.300");
   const listRender = twitterData.map((group) => {
     const listRow = group.members.map(member => (
       <WrapItem key={member.tweetId} >
-        <Link textColor="teal.600" href={`https://twitter.com/${member.tweetId}`} isExternal>
-          <Text fontSize="md">{member.name}</Text>
+        <Link href={`https://twitter.com/${member.tweetId}`} isExternal>
+          <Text color={color} fontSize="md">{member.name}</Text>
         </Link>
       </WrapItem>
     ))

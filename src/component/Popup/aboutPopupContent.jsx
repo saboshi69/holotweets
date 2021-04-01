@@ -16,12 +16,10 @@ function AboutPopupContent() {
                 Upcoming features
             </Heading>
             <Text fontSize="md">
-                - Dark Mode <br />
                 - Multiple languages support <br />
             </Text>
             <Text fontWeight="500" mt="5px">May or may not do these... &#128064;</Text>
             <Text fontSize="md">
-                - Mobile responsive <br />
                 - Pretend working mode & urgent escape <br />
                 - New Tweets notification
             </Text>
